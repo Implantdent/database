@@ -34,6 +34,12 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Azure Login
+      if: ${{ github.ref_name == 'main' }}
+      uses: Azure/login@v1.4.6
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
     - name: Desplegar en BD Azure
       if: ${{ github.ref_name == 'main' }}
       uses: azure/sql-action@v2.2
