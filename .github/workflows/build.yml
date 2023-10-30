@@ -38,7 +38,7 @@ jobs:
       if: ${{ github.ref_name == 'main' }}
       uses: azure/sql-action@v2.2
       with:
-        connection-string: 'Server=tcp:implantdent.database.windows.net,1433;Initial Catalog=implantdent;Persist Security Info=False;User ID=leandro;Password=Santi693*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
+        connection-string: ${{ secrets.CONN_STR }}
         path: 'Database/Database.sqlproj'
         action: 'publish'
         build-arguments: '-c Release'
