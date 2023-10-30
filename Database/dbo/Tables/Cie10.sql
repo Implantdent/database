@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Cie10]
+(
+	[Cie10Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Code] CHAR(4) NOT NULL, 
+    [Name] VARCHAR(500) NOT NULL, 
+    [SubGroupCie10Id] INT NOT NULL, 
+    CONSTRAINT [FK_Cie10_SubGroupCie10] FOREIGN KEY (SubGroupCie10Id) REFERENCES SubGroupCie10(SubGroupCie10Id)
+)
