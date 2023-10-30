@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - "main"
-      - "test"
+      - "qa"
       - "dev"
 jobs:
   build:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
 
-    - name: Descarga del código
+    - name: Descarga del cÃ³digo
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
@@ -28,11 +28,17 @@ jobs:
 
     steps:
 
-    - name: Descarga del código
+    - name: Descarga del cÃ³digo
       if: ${{ github.ref_name == 'main' }}
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
+
+    - name: Azure Login
+      if: ${{ github.ref_name == 'main' }}
+      uses: Azure/login@v1.4.6
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Desplegar en BD Azure
       if: ${{ github.ref_name == 'main' }}
