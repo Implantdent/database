@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="591641df-47b6-4fb4-beca-7b934e22074a" ChangeDateTime="10/28/2023 15:58:23">
+    <Property Name="ElementName" Value="[dbo].[Cie10].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Cie10]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Cie10Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ac179858-d32d-467f-9a6d-9b5d028a0b74" ChangeDateTime="10/28/2023 16:00:19">
+    <Property Name="ElementName" Value="[dbo].[Cie10].[Cap]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Cie10]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ChapterId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="27c2d5ec-e2c8-4aec-acb5-5cfb87ab3b8d" ChangeDateTime="10/28/2023 16:00:59">
+    <Property Name="ElementName" Value="[dbo].[ChapterCie10].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ChapterCie10]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ChapterCie10Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="277c9d9c-3776-45ba-9313-f8f5032dd2cf" ChangeDateTime="10/28/2023 16:01:53">
+    <Property Name="ElementName" Value="[dbo].[GroupCie10].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[GroupCie10]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="GroupCie10Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6927b048-e5a8-44ce-b29e-76616e864846" ChangeDateTime="10/28/2023 16:09:43">
+    <Property Name="ElementName" Value="[dbo].[Cie10].[ChapterId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Cie10]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SubGroupCie10Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e09a82e9-3eba-445a-a578-df722b4e77f6" ChangeDateTime="10/28/2023 16:12:43">
+    <Property Name="ElementName" Value="[dbo].[SubGroupCie10].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SubGroupCie10]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SubGroupCie10Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9eda11fb-d03e-4a49-b2f1-a95786ede41f" ChangeDateTime="10/28/2023 16:17:27">
+    <Property Name="ElementName" Value="[dbo].[GroupCie10].[ChapterId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[GroupCie10]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ChapterCie10Id" />
+  </Operation>
+</Operations>
