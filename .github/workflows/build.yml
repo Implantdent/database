@@ -7,7 +7,7 @@ on:
       - "dev"
 jobs:
   build:
-    runs-on: 'ubuntu-latest'
+    runs-on: 'windows-latest'
 
     steps:
 
@@ -16,20 +16,21 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Compilar
-      uses: Elskom/build-dotnet@v1.1.1
-      with:
-        SOLUTION_FILE_PATH: './Database.sln'
-      
+    - name: Setup MsBuild
+      uses: microsoft/setup-msbuild@v1.1
+
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
+    - name: Build app for release
+      run: msbuild ./Database.sln
+
   deploy:
     needs: build
-    runs-on: 'ubuntu-latest'
+    runs-on: 'windows-latest'
 
     steps:
 
