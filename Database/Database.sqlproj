@@ -64,6 +64,20 @@
     <Build Include="dbo\Tables\ChapterCie10.sql" />
     <Build Include="dbo\Tables\GroupCie10.sql" />
     <Build Include="dbo\Tables\SubGroupCie10.sql" />
+    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\TypeQuestion.sql" />
+    <Build Include="dbo\Tables\Relationship.sql" />
+    <Build Include="dbo\Tables\Quote.sql" />
+    <Build Include="dbo\Tables\PersonalBackgroundQuestion.sql" />
+    <Build Include="dbo\Tables\PersonalBackgroundAnswer.sql" />
+    <Build Include="dbo\Tables\Patient.sql" />
+    <Build Include="dbo\Tables\Parameter.sql" />
+    <Build Include="dbo\Tables\Genre.sql" />
+    <Build Include="dbo\Tables\Format.sql" />
+    <Build Include="dbo\Tables\FamilyBackground.sql" />
+    <Build Include="dbo\Tables\DocumentType.sql" />
+    <Build Include="dbo\Tables\ClinicHistoryQuestion.sql" />
+    <Build Include="dbo\Tables\ClinicHistory.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database.refactorlog" />
