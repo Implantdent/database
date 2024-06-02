@@ -27,7 +27,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: dacpac
-        path: ./bin/Release/Database.dacpac
+        path: ./Database/bin/Release/Database.dacpac
 
   sonar:
     name: SonarQube
@@ -51,7 +51,7 @@ jobs:
     name: Desplegar
     needs: sonar
     runs-on: 'windows-latest'
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/dev' }}
 
     steps:
     - name: Descargar Dacpac
