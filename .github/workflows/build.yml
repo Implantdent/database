@@ -7,6 +7,31 @@ on:
       - "dev"
 jobs:
   build:
+    name: Compilar
+    runs-on: 'windows-latest'
+
+    steps:
+
+    - name: Descarga del código
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Configurar msbuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Compilar solución
+      run: msbuild Database.sln /p:Configuration=Release
+
+    - name: Publicar objeto
+      uses: actions/upload-artifact@v2
+      with:
+        name: dacpac
+        path: ./Database/bin/Release/Database.dacpac
+
+  sonar:
+    name: SonarQube
+    needs: build
     runs-on: 'ubuntu-latest'
 
     steps:
@@ -21,3 +46,27 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  deploy:
+    name: Desplegar
+    needs: sonar
+    runs-on: 'windows-latest'
+    if: ${{ github.ref == 'refs/heads/main' }}
+
+    steps:
+    - name: Descargar Dacpac
+      uses: actions/download-artifact@v2
+      with:
+        name: dacpac
+        path: ./
+
+    - name: Azure login
+      uses: azure/login@v2.1.0
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - uses: Azure/sql-action@v1
+      with:
+        server-name: implantdent.database.windows.net
+        connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
+        dacpac-package: './Database.dacpac'
