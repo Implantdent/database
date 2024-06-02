@@ -51,7 +51,7 @@ jobs:
     name: Desplegar
     needs: sonar
     runs-on: 'windows-latest'
-    if: ${{ github.ref == 'refs/heads/dev' }}
+    if: ${{ github.ref == 'refs/heads/main' }}
 
     steps:
     - name: Descargar Dacpac
