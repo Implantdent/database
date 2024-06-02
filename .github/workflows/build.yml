@@ -23,6 +23,12 @@ jobs:
     - name: Compilar solución
       run: msbuild Database.sln /p:Configuration=Release
 
+    - name: Publicar objeto
+      uses: actions/upload-artifact@v2
+      with:
+        name: dacpac
+        path: ./bin/Release/Database.dacpac
+
   sonar:
     name: SonarQube
     needs: build
@@ -43,18 +49,16 @@ jobs:
 
   deploy:
     name: Desplegar
-    needs: build
+    needs: sonar
     runs-on: 'windows-latest'
     if: ${{ github.ref == 'refs/heads/main' }}
 
     steps:
-
-    - name: Azure login
-      uses: azure/login@v2
+    - name: Descargar Dacpac
+      uses: actions/download-artifact@v2
       with:
-        client-id: ${{ secrets.AZURE_CLIENT_ID }}
-        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        name: dacpac
+        path: ./
 
     - name: Azure login
       uses: azure/login@v2
@@ -67,4 +71,4 @@ jobs:
       with:
         server-name: implantdent
         connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
-        dacpac-package: './bin/Relese/Database.dacpac'
+        dacpac-package: './Database.dacpac'
