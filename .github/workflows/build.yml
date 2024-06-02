@@ -6,8 +6,26 @@ on:
       - "qa"
       - "dev"
 jobs:
+  build:
+    name: Compilar
+    runs-on: 'windows-latest'
+
+    steps:
+
+    - name: Descarga del código
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Configurar msbuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Compilar solución
+      run: msbuild Database.sln /p:Configuration=Release
+
   sonar:
     name: SonarQube
+    needs: build
     runs-on: 'ubuntu-latest'
 
     steps:
@@ -23,25 +41,11 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-  build:
-    name: Compilar
-    runs-on: 'windows-latest'
-
-    steps:
-
-    - name: Descarga del código
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-
-    - name: Build solution
-      run: msbuild Database.sln /p:Configuration=Release
-
   deploy:
     name: Desplegar
     needs: build
     runs-on: 'windows-latest'
-    if: ${{ always() }}
+    if: ${{ github.ref == 'refs/heads/main' }}
 
     steps:
 
