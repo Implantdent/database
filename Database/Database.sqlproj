@@ -79,6 +79,11 @@
     <Build Include="dbo\Tables\DocumentType.sql" />
     <Build Include="dbo\Tables\ClinicHistoryQuestion.sql" />
     <Build Include="dbo\Tables\ClinicHistory.sql" />
+    <Build Include="dbo\Tables\PatientType.sql" />
+    <Build Include="dbo\Tables\Country.sql" />
+    <Build Include="dbo\Tables\State.sql" />
+    <Build Include="dbo\Tables\City.sql" />
+    <Build Include="dbo\Tables\ZoneType.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database.refactorlog" />

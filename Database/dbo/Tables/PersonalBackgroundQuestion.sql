@@ -1,7 +1,6 @@
 ﻿CREATE TABLE [dbo].[PersonalBackgroundQuestion] (
-    [PersonalBackgroundQuestionId] SMALLINT     IDENTITY (1, 1) NOT NULL,
+    [PersonalBackgroundQuestionId] SMALLINT     PRIMARY KEY IDENTITY,
     [Question]                     VARCHAR (50) NOT NULL,
-    [AdditionalQuestion]           VARCHAR (50) NOT NULL,
-    CONSTRAINT [PK_PersonalBackgroundQuestion] PRIMARY KEY CLUSTERED ([PersonalBackgroundQuestionId] ASC)
+    [AdditionalQuestion]           VARCHAR (50) NOT NULL
 );
 
