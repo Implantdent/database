@@ -13,7 +13,7 @@ jobs:
     steps:
 
     - name: Descarga del código
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4.1.5
       with:
         fetch-depth: 0
 
@@ -24,7 +24,7 @@ jobs:
       run: msbuild Database.sln /p:Configuration=Release
 
     - name: Publicar objeto
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3.0.1
       with:
         name: dacpac
         path: ./Database/bin/Release/Database.dacpac
@@ -37,7 +37,7 @@ jobs:
     steps:
 
     - name: Descarga del código
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4.1.5
       with:
         fetch-depth: 0
 
@@ -55,7 +55,7 @@ jobs:
 
     steps:
     - name: Descargar Dacpac
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.1.7
       with:
         name: dacpac
         path: ./
@@ -65,7 +65,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - uses: Azure/sql-action@v1
+    - uses: Azure/sql-action@v2.2.1
       with:
         server-name: implantdent.database.windows.net
         connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
