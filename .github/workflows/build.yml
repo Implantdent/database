@@ -67,6 +67,6 @@ jobs:
 
     - uses: Azure/sql-action@v2.2.1
       with:
-        server-name: implantdent.database.windows.net
+        action: publish
         connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
-        dacpac-package: './Database.dacpac'
+        path: './Database.dacpac'
