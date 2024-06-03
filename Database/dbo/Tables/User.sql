@@ -1,7 +1,6 @@
 ﻿CREATE TABLE [dbo].[User] (
-    [UserId] SMALLINT      IDENTITY (1, 1) NOT NULL,
+    [UserId] SMALLINT      PRIMARY KEY IDENTITY,
     [Email]  VARCHAR (200) NOT NULL,
-    [Name]   VARCHAR (400) NOT NULL,
-    CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED ([UserId] ASC)
+    [Name]   VARCHAR (400) NOT NULL
 );
 

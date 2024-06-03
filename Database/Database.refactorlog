@@ -49,4 +49,46 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="ChapterCie10Id" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="ed4a1159-6aa3-402b-8aa5-2dc4b3cfd41a" ChangeDateTime="06/03/2024 18:38:53">
+    <Property Name="ElementName" Value="[dbo].[Country].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Country]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CountryId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="78c7aab9-c1ce-4b79-b3e1-f303792f7b1a" ChangeDateTime="06/03/2024 18:45:44">
+    <Property Name="ElementName" Value="[dbo].[Patient].[NacionalityId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Patient]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CountrId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="51ebe253-c02d-4b73-867b-de787ed7dc8a" ChangeDateTime="06/03/2024 18:51:55">
+    <Property Name="ElementName" Value="[dbo].[State].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[State]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StateId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="92767696-1894-4282-bf44-a6b2deeb6dd6" ChangeDateTime="06/03/2024 18:55:40">
+    <Property Name="ElementName" Value="[dbo].[City].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[City]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CityId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4cdbccc6-fbaf-4687-ae0f-81178feb57d7" ChangeDateTime="06/03/2024 19:01:50">
+    <Property Name="ElementName" Value="[dbo].[ZoneType].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ZoneType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ZoneTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6a59476f-75d4-4728-a54d-2fa88b264ddb" ChangeDateTime="06/03/2024 19:10:50">
+    <Property Name="ElementName" Value="[dbo].[Patient].[CivilState]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Patient]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CivilStateId" />
+  </Operation>
 </Operations>
