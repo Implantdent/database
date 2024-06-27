@@ -9,4 +9,4 @@
 
 GO
 
-CREATE INDEX [UK_City_Code] ON [dbo].[City] ([Code])
+CREATE UNIQUE INDEX [UK_City_Code] ON [dbo].[City] ([Code])
