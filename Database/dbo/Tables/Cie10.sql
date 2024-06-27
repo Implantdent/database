@@ -6,3 +6,7 @@
     [SubGroupCie10Id] INT NOT NULL, 
     CONSTRAINT [FK_Cie10_SubGroupCie10] FOREIGN KEY (SubGroupCie10Id) REFERENCES SubGroupCie10(SubGroupCie10Id)
 )
+
+GO
+
+CREATE UNIQUE INDEX [UK_Cie10_Code] ON [dbo].[Cie10] ([Code])

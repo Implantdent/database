@@ -84,12 +84,13 @@
     <Build Include="dbo\Tables\State.sql" />
     <Build Include="dbo\Tables\City.sql" />
     <Build Include="dbo\Tables\ZoneType.sql" />
-    <Build Include="dbo\Tables\Procedures.sql" />
+    <Build Include="dbo\Tables\Procedure.sql" />
     <Build Include="dbo\Tables\Modality.sql" />
     <Build Include="dbo\Tables\ServiceGroup.sql" />
     <Build Include="dbo\Tables\Service.sql" />
     <Build Include="dbo\Tables\Finality.sql" />
     <Build Include="dbo\Tables\ExternalCause.sql" />
+    <Build Include="dbo\Tables\Diagnosis.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database.refactorlog" />
