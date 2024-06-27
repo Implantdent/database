@@ -7,4 +7,4 @@
 
 GO
 
-CREATE INDEX [UK_ZoneType_Code] ON [dbo].[ZoneType] ([Code])
+CREATE UNIQUE INDEX [UK_ZoneType_Code] ON [dbo].[ZoneType] ([Code])
