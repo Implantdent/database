@@ -161,4 +161,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="DestinyPatientId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="ee0e40f3-81cb-4414-85e8-effe4a34506a" ChangeDateTime="06/28/2024 18:56:54">
+    <Property Name="ElementName" Value="[dbo].[MedicineType].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MedicineType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MedicineTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3d688e56-790b-4a3e-a40d-d43e6d9a382e" ChangeDateTime="06/28/2024 19:08:33">
+    <Property Name="ElementName" Value="[dbo].[IUM].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[IUM]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IUMId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7aff6693-2f86-41da-84bd-26937a47b25c" ChangeDateTime="06/28/2024 20:36:30">
+    <Property Name="ElementName" Value="[dbo].[FFM].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FFM]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FFMId" />
+  </Operation>
 </Operations>

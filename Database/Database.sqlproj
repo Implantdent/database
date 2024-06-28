@@ -94,6 +94,13 @@
     <Build Include="dbo\Tables\PaymentType.sql" />
     <Build Include="dbo\Tables\IngressVia.sql" />
     <Build Include="dbo\Tables\DestinyPatient.sql" />
+    <Build Include="dbo\Tables\MedicineType.sql" />
+    <Build Include="dbo\Tables\IUM.sql" />
+    <Build Include="dbo\Tables\CUM.sql" />
+    <Build Include="dbo\Tables\UMM.sql" />
+    <Build Include="dbo\Tables\FFM.sql" />
+    <Build Include="dbo\Tables\UPR.sql" />
+    <Build Include="dbo\Tables\OtherServiceType.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database.refactorlog" />
