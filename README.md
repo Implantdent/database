@@ -1,6 +1,13 @@
 # Database
 
-Proyecto con los objetos de la aplicación ImplantDent
+Proyecto con los objetos de la base de datos que soporta la aplicación ImplantDent
+
+| Sonarqube |
+|---|
+| [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Implantdent_database&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Implantdent_database) |
+| [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Implantdent_database&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Implantdent_database) |
+| [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Implantdent_database&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Implantdent_database) |
+
 
 ## CI/CD
 
@@ -19,7 +26,6 @@ El despliegue se ejecuta en
 | dev | N/A |
 | qa | N/A |
 | main | implantdent.database.windows.net / implantdent |
-
 
 ## Lenguaje
 
