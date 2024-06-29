@@ -231,4 +231,32 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="ProcToPatientId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="b76b5789-1091-4b71-823e-52434b55eeaf" ChangeDateTime="06/29/2024 14:30:51">
+    <Property Name="ElementName" Value="[dbo].[Emergency].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Emergency]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EmergencyId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f1c25c3b-2b32-464d-a853-87276c7a4ab7" ChangeDateTime="06/29/2024 15:04:31">
+    <Property Name="ElementName" Value="[dbo].[Emergency].[Death]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Emergency]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DeathDiagnosisId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fa17ef5a-ee67-4f61-968f-3f658b05f744" ChangeDateTime="06/29/2024 15:05:02">
+    <Property Name="ElementName" Value="[dbo].[Emergency].[Date]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Emergency]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateIn" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6c2641e5-f896-465a-8278-993c671e90c5" ChangeDateTime="06/29/2024 15:16:44">
+    <Property Name="ElementName" Value="[dbo].[Medicine].[IngressViaId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Medicine]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Date" />
+  </Operation>
 </Operations>
