@@ -259,4 +259,32 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Date" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="973918ef-56cd-4488-b902-f2841085559b" ChangeDateTime="07/01/2024 15:55:33">
+    <Property Name="ElementName" Value="[dbo].[Format].[Format]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Format]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Text" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ce7eb47d-bf56-473a-85de-9e724043185a" ChangeDateTime="07/01/2024 16:15:39">
+    <Property Name="ElementName" Value="[dbo].[TypeQuestion].[TypeQuestionId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TypeQuestion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QuestionTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cb9bcece-863f-4a45-8bad-f4ce5b377102" ChangeDateTime="07/01/2024 16:17:53">
+    <Property Name="ElementName" Value="[dbo].[ClinicHistoryQuestion].[TypeQuestionId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ClinicHistoryQuestion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QuestionTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5446b365-b86a-4410-8acd-ce4a53ee4cf2" ChangeDateTime="07/01/2024 17:34:26">
+    <Property Name="ElementName" Value="[dbo].[CivilState].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CivilState]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CivilStateId" />
+  </Operation>
 </Operations>
