@@ -1,7 +1,6 @@
 ﻿CREATE TABLE [dbo].[Patient] (
     [PatientId]      INT           PRIMARY KEY IDENTITY,
     [PatientTypeId]  SMALLINT      NOT NULL,
-    [Date]           DATETIME      NOT NULL,
     [FirstName]      VARCHAR (200) NOT NULL,
     [SecondName]     VARCHAR (200) NOT NULL,
     [FirstLastName]  VARCHAR (200) NOT NULL,
@@ -13,18 +12,18 @@
     [Ocupation]      VARCHAR (50)  NOT NULL,
     [GenreId]        SMALLINT      NOT NULL,
     [CivilStateId]   SMALLINT      NOT NULL,
-    [CountryId]      SMALLINT      NOT NULL,
     [CityId]         SMALLINT      NOT NULL,
     [ZoneTypeId]     SMALLINT      NOT NULL,
-    [EpsId]          SMALLINT      NOT NULL,
+    [EPSId]          SMALLINT      NOT NULL,
     [Address]        VARCHAR (500) NOT NULL,
     [ContactNumber]  VARCHAR (50)  NOT NULL,
     [ContactName]    VARCHAR (200) NOT NULL,
     CONSTRAINT [FK_Patient_DocumentType] FOREIGN KEY ([DocumentTypeId]) REFERENCES [dbo].[DocumentType] ([DocumentTypeId]),
     CONSTRAINT [FK_Patient_PatientTypeId] FOREIGN KEY ([PatientTypeId]) REFERENCES [dbo].[PatientType] ([PatientTypeId]),
-    CONSTRAINT [FK_Patient_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [dbo].[Country] ([CountryId]),
+    CONSTRAINT [FK_Patient_EPSId] FOREIGN KEY ([EPSId]) REFERENCES [dbo].[EPS] ([EPSId]),
     CONSTRAINT [FK_Patient_CityId] FOREIGN KEY ([CityId]) REFERENCES [dbo].[City] ([CityId]),
     CONSTRAINT [FK_Patient_ZoneTypeId] FOREIGN KEY ([ZoneTypeId]) REFERENCES [dbo].[ZoneType] ([ZoneTypeId]),
-    CONSTRAINT [FK_Patient_Genre] FOREIGN KEY ([GenreId]) REFERENCES [dbo].[Genre] ([GenreId])
+    CONSTRAINT [FK_Patient_Genre] FOREIGN KEY ([GenreId]) REFERENCES [dbo].[Genre] ([GenreId]),
+    CONSTRAINT [FK_Patient_CivilState] FOREIGN KEY ([CivilStateId]) REFERENCES [dbo].[CivilState] ([CivilStateId])
 );
 

@@ -106,6 +106,8 @@
     <Build Include="dbo\Tables\ProcToPatient.sql" />
     <Build Include="dbo\Tables\Emergency.sql" />
     <Build Include="dbo\Tables\Medicine.sql" />
+    <Build Include="dbo\Tables\CivilState.sql" />
+    <Build Include="dbo\Tables\EPS.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database.refactorlog" />
