@@ -26,6 +26,6 @@
     CONSTRAINT [FK_Query_RelatedDiagnosis1] FOREIGN KEY ([RelatedDiagnosisId1]) REFERENCES [Cie10]([Cie10Id]),
     CONSTRAINT [FK_Query_RelatedDiagnosis2] FOREIGN KEY ([RelatedDiagnosisId2]) REFERENCES [Cie10]([Cie10Id]),
     CONSTRAINT [FK_Query_RelatedDiagnosis3] FOREIGN KEY ([RelatedDiagnosisId3]) REFERENCES [Cie10]([Cie10Id]),
-    CONSTRAINT [FK_Query_DiagnosisType] FOREIGN KEY ([DiagnosisTypeId]) REFERENCES [Diagnosis]([DiagnosisId]),
+    CONSTRAINT [FK_Query_DiagnosisType] FOREIGN KEY ([DiagnosisTypeId]) REFERENCES [DiagnosisType]([DiagnosisTypeId]),
     CONSTRAINT [FK_Query_Doctor] FOREIGN KEY ([DoctorId]) REFERENCES [Doctor]([DoctorId])
 )
