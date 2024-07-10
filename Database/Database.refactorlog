@@ -294,4 +294,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="RoleId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="b2a2f0b0-c141-49f4-ae34-cfb263cabe2d" ChangeDateTime="07/10/2024 16:37:10">
+    <Property Name="ElementName" Value="[dbo].[LogDb].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LogDb]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LogDbId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="369e5488-6b49-4826-892d-be98de74d82f" ChangeDateTime="07/10/2024 16:41:10">
+    <Property Name="ElementName" Value="[dbo].[LogComponent].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LogComponent]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LogComponentId" />
+  </Operation>
 </Operations>
